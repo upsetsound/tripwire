@@ -1,0 +1,9 @@
+::highlight(tw-ca) {
+  background-color: rgba(255, 210, 0, 0.38);
+  text-decoration: underline dotted rgba(200, 140, 0, 0.95);
+}
+
+::highlight(tw-ca-copied) {
+  background-color: rgba(46, 158, 91, 0.45);
+  text-decoration: none;
+}

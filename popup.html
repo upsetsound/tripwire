@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tripwire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand"><span class="mark"></span>Tripwire</div>
+      <button id="clearAll" class="ghost small" hidden>Mark all seen</button>
+    </header>
+
+    <section class="add">
+      <button id="watchTab" class="primary">Watch this tab</button>
+      <form id="addForm">
+        <input id="url" type="text" placeholder="or paste a site URL" autocomplete="off" spellcheck="false" />
+        <select id="interval" title="Check every">
+          <option value="2000">2s</option>
+          <option value="5000" selected>5s</option>
+          <option value="10000">10s</option>
+          <option value="30000">30s</option>
+          <option value="60000">1m</option>
+        </select>
+        <button type="submit" class="secondary">Add</button>
+      </form>
+      <p id="err" class="err" hidden></p>
+    </section>
+
+    <ul id="list"></ul>
+    <p id="empty" class="empty">
+      Nothing watched yet. Open a coin's website and hit <b>Watch this tab</b>, or right-click any link and choose
+      <b>Tripwire: watch this link</b>.
+    </p>
+
+    <footer>
+      <label><input type="checkbox" id="hl" /> Highlight CAs on pages</label>
+      <label id="siteRow" hidden><input type="checkbox" id="site" /> <span id="siteLabel">on this site</span></label>
+      <label><input type="checkbox" id="snd" /> Alert sound</label>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
